@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gluten:wght@100;200;300;400;800&display=swap');
+*{
+}
+
+.body{
+    transition: all 1s ease;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: teal;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 300;
+    z-index: 999;
+    padding: 30px 0;
+    transition: all 0.3s ease;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+.nav-link{
+    color: silver;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link:hover{
+    color:wheat;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:wheat;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .nav-link:hover:after {
+    color: wheat;
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+
+  .btn{
+      background-color: white;
+  }
+
+  .btn-light:hover:after{
+      background-color: white;
+  }
+
+  .btn-light:before{
+    background-color: black;
+  }
+
+  .btn-light:after{
+    background-color: black;
+}
+
+
+  .btn-light:after{
+    color: maroon;
+    background-color: white;
+}
+
+section{
+    padding: 100px, 0;
+}
+
+.home {
+    background: url("img/pic3.png") no-repeat center;
+    display: flex;
+    height: 100vh;
+    color: wheat;
+    min-height: 500px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-info .first-text{
+    font-size: 50px;
+}
+
+.home .home-info .first-text{
+    font-size: 50px;
+}
+
+.home .home-info .second-text{
+    font-size: 70px;
+    margin-left: -3px;
+}
+
+.home .home-info .third-text{
+    font-size: 50px;
+    font-weight: 800;
+    margin: 3px 0;
+}
+
+/* blinking the name */
+#name {
+    animation-duration: 5000ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation: blinkingText 3s infinite;
+}
+
+@keyframes blinkingText{
+    0%{     color: yellow;    }
+    25%{    color:red; }
+    50%{    color: pink}
+    75%{    color: wheat;  }
+    100%{   color:white   }
+}
+
+@keyframes blink {
+    from {
+       opacity: 1;
+    }
+    to {
+       opacity: 0;
+    }
+  }
+
+
+section{
+    padding: 100px, 0;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.about {
+    padding-top: 50px;
+    font-family: 'Architects Daughter', cursive;
+    background: black;
+    color: white;
+}
+
+
+
+.about .title{
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 40%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about .about-content .right{
+   width: 60%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: teal;
+}
+.about .about-content .right p{
+    text-align: justify;
+    align-items: center;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: teal;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid teal;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.about .about-content .right a:hover{
+    color:teal;
+    border: 2px solid teal;
+    text-decoration: none;
+    background: none;
+}
+
+/* portfolio */
+.portfolio1{
+    display: flex;
+    height: 100vh;
+    color: white;
+    background: black;
+    min-height: 500px;
+    font-family: 'Architects Daughter', cursive;
+    border: 2px white;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio{
+    display: flex;
+    height: 68vh;
+    color: white;
+    background: black;
+    min-height: 200px;
+    font-family: 'Architects Daughter', cursive;
+    border: 2px white;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio1 .title{
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    padding-top: 200px;
+}
+
+.portfolio1 .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.portfolio .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.portfolio1 .content .text{
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.portfolio .content .text{
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.portfolio1 .content .right p{
+    text-align: justify;
+    align-items: center;
+}
+
+.portfolio .content .right p{
+    text-align: justify;
+    align-items: center;
+}
+
+.portfolio1 .content:hover{
+    color: white;
+    background: teal;
+    transform: scale(1.05);
+}
+
+.portfolio .content:hover{
+    color: white;
+    background: teal;
+    transform: scale(1.05);
+}
+
+.portfolio .content  .left{
+    width: 40%;
+}
+
+.portfolio1 .content  .left{
+    width: 40%;
+}
+
+.portfolio .content  .right{
+    width: 60%;
+}
+
+.portfolio1 .content  .right{
+    width: 60%;
+}
+
+.portfolio1 .content  .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.portfolio .content  .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* services */
+
+.services{
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.services.change {
+    background-color:black;
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: wheat;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.services .title{
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.services .service-info {
+    display: flex;
+}
+
+.services .service-info .card{
+    width: 30%;
+    background: #111;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px;
+}
+
+.services .service-info .card:hover i{
+    color: #fff;
+}
+
+.services.change .service-info .card{
+    width: 30%;
+    background: #222;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px;
+}
+
+.services .service-info .card:hover{
+    background: rgba(0, 128, 128, 0.5);
+    color: white;
+}
+.services .service-info .card .box{
+    transition: all 0.3s ease;
+}
+.services .service-info .card:hover .box{
+    transform: scale(1.05);
+}
+.services .service-info .card i{
+    font-size: 50px;
+    color: rgba(0, 128, 128, 1);
+}
+
+.services .service-info .card .text{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.services #photo .title{
+    text-align: center;
+}
+
+.contact1 {
+    display: flex;
+    height: 100vh;
+    color: white;
+    background: black;
+    min-height: 500px;
+    font-family: 'Architects Daughter', cursive;
+    border: 2px white;
+    align-items: center;
+}
+
+.contact1 .row .col-sm{
+    text-align: center;
+    border-radius: 6px;
+}
+
+.contact1 .row .col-lg{
+    text-align: center;
+}
+
+.contact1 .row {
+    margin: 30px;
+}
+ 
+.contact1 .row .col-sm:hover{
+    background-color: rgba(0, 128, 128, 0.5); 
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.contact1 .row .col-sm:hover i{
+    color: white;
+}
+
+
+.contact1 i{
+    font-size: 40px;
+    color: teal;
+}
+
+
+footer{
+    text-align: center;
+    padding : 20px;
+    font-family: 'Architects Daughter', cursive;
+    background-image: radial-gradient(black, green, teal, white);
+    color: wheat;
+    transition: all 1s ease;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+  
+    
